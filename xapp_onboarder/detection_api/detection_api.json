@@ -1,0 +1,19 @@
+{
+    "rmr": ["RIC_E2_SETUP_REQ",
+            "RIC_SUB_RESP"],
+
+    "restapi": {
+        "appmgr": {
+            "get": [
+                "/ric/v1/root/addUser",
+                "/ric/v1/root/deleteUser",
+                "/ric/v1/root/generateToken"
+            ]
+        },
+        "e2mgr": {
+            "put": [
+                "/v1/nodeb/shutdown"
+            ]
+        }
+    }
+}
