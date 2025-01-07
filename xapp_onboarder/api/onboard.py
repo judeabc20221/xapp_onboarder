@@ -75,6 +75,7 @@ def onboard(config_file, controls_schema_file, username, password ):
         return response_message.get_return()
     
     # register permission in appmgr
+    """
     try:
         register_RestApi( config_file, username, password )
     except registerError as err:
@@ -84,6 +85,7 @@ def onboard(config_file, controls_schema_file, username, password ):
                                     error_message=str(err),
                                     status="register in appmgr failed")
         return response_message.get_return()
+    """
 
     try:
         xapp = xApp(config_file, schema_file)
