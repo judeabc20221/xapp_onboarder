@@ -31,7 +31,7 @@ from xapp_onboarder.restapi.register_restapi import registerError, register_Rest
 log = logging.getLogger(__name__)
 
 
-def onboard(config_file, controls_schema_file, username, password ):
+def onboard(config_file, controls_schema_file):
     if not repo_manager.is_repo_ready():
         response_message = response(model=error_message_model, status_code=500,
                                     error_source="xapp_onboarder",
