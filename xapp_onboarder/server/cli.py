@@ -136,7 +136,7 @@ class cli():
         else:
             return {"status": "NOT_OK"}
 
-    def onboard(self, config_file_path, shcema_file_path="../../../docs/xapp_onboarder/guide/embedded-schema.json", username="", password="" ):
+    def onboard(self, config_file_path, shcema_file_path="../../../docs/xapp_onboarder/guide/embedded-schema.json" ):
         """Onboard an xApp with local descriptor files. Use --config_file_path to specify the path to
         config-file.json file, --shcema_file_path to specify the path to schema.json file. """
         try:
@@ -149,7 +149,7 @@ class cli():
         except Exception as err:
             return err
 
-        message, status = onboard(config_file, schema_file, username, password)
+        message, status = onboard(config_file, schema_file)
         return json.dumps(message, indent=4, sort_keys=True)
 
     def download_and_onboard(self, config_file_url, schema_file_url):
