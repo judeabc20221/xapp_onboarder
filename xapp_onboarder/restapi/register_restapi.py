@@ -18,7 +18,6 @@ class register_RestApi():
         config.load_kube_config()
         self.v1 = client.CoreV1Api()
 
-        restapi = json.dumps( self.config_file[ 'restapi' ] )
         appmgr_ip = self.get_pod_ips( "ricplt", "deployment-ricplt-appmgr")
         url = f"http://{appmgr_ip}:8085/ric/v1/root/generateToken"
         params = {
